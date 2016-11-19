@@ -14,6 +14,4 @@ ADD app/ /app
 
 EXPOSE 9000
 
-WORKDIR /app
-
 CMD ["php-fpm7.0", "--nodaemonize"]
