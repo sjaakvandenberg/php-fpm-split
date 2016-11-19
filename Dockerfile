@@ -2,7 +2,7 @@ FROM ubuntu
 
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y \
-  php5-fpm
+  php-fpm
 
 ADD ./php-fpm.conf /etc/php5/fpm/php-fpm.conf
 ADD ./pool.d/ /etc/php5/fpm/pool.d
@@ -16,4 +16,4 @@ EXPOSE 9000
 
 WORKDIR /app
 
-CMD ["php5-fpm", "--nodaemonize"]
+CMD ["php-fpm", "--nodaemonize"]
